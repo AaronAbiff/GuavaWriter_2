@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "npm start"
+  port = 8888
+  targetPort = 3000
+  publish = "."
+  framework = "#custom"
